@@ -1,0 +1,10 @@
+@import 'src/styles/variables';
+
+.item-category{
+    &__content{
+        margin: 5px 0;
+        &--active{
+            background-color: $gray;
+        }
+    }
+}

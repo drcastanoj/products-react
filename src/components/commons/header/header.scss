@@ -1,0 +1,31 @@
+@import 'src/styles/variables';
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .menu{
+        display: flex;
+        justify-content: center;
+        background-color: $gray;
+        &__link {
+            width: 10%;
+            display: flex;
+            height: 45px;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            color: $black;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 15px;
+            &--active{
+                background-color: $gray-dark;
+            }
+        }
+    }
+}

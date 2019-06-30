@@ -1,0 +1,13 @@
+.product-container {
+    display: flex;
+
+    &__categories{
+        position: relative;
+        width: 25%;
+    }
+
+    &__product-list{
+        width: 75%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1accff",
+    "titleBar.activeBackground": "#00b3e6",
+    "titleBar.inactiveBackground": "#00b3e699",
+    "statusBar.background": "#00b3e6",
+    "statusBarItem.hoverBackground": "#008bb3"
+  },
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+
+}
