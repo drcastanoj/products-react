@@ -25,10 +25,13 @@
     "start": "run-p start:dev start:api",
     "start:dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "prestart:api": "node tools/createMockDb.js",
-    "start:api": "node tools/apiServer.js"
+    "start:api": "node tools/apiServer.js",
+    "test-e2e": "cypress open",
+    "cy": "run-p start:dev start:api test-e2e ",
+    "test:report" : ""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,9 +50,17 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.4",
+    "cypress": "^3.3.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-enzyme": "^7.0.2",
     "json-server": "^0.15.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!node_modules/"
+    ],
+    "coverageReporters": ["text"]
   }
 }

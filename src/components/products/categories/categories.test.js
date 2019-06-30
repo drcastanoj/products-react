@@ -14,6 +14,7 @@ function renderComponent(args) {
             { category: 'Services', icon: 'build' },
             { category: 'Office', icon: 'folder' }
         ],
+        categorySelected: undefined,
     }
     const props = { ...defaultProps, ...args };
     return shallow(<Categories {...props} />);
@@ -48,6 +49,28 @@ describe('Categories Component', () => {
         });
     });
 
+    describe('Method: isCategorySelected', () => {
+
+        it('should return true same category selected  ', () => {
+            jest.spyOn(actions, 'categoryIsSelected');
+            const instace = renderComponent({categorySelected: 'Tech'}).instance();
+            expect(instace.isCategorySelected('Tech')).toBe(true);
+        });
+
+        it('should return true if categorySected is null and selected  All', () => {
+            jest.spyOn(actions, 'categoryIsSelected');
+            const instace = renderComponent({categorySelected: null}).instance();
+            expect(instace.isCategorySelected('All')).toBe(true);
+        });
+
+        it('should return false si categorySelected is null and selected  another category', () => {
+            jest.spyOn(actions, 'categoryIsSelected');
+            const instace = renderComponent({categorySelected: null}).instance();
+            expect(instace.isCategorySelected('Tech')).toBe(false);
+        });
+
+    });
+
     describe('Method: render', () => {
 
         it('should have ItemCategory ', () => {
@@ -59,6 +82,7 @@ describe('Categories Component', () => {
             const component = renderComponent();
             expect(component.find('List').length).toBe(1);
         });
+
 
     });
 })

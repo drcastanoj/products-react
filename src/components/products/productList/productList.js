@@ -23,7 +23,10 @@ export function ProductList({ products, actions, categorySelected }) {
   }, [categorySelected, products, actions]);
 
   return (<article >
-    Showing: <b>{productsFiltered.length}</b> products - hidden: <b>{ products.length - productsFiltered.length} </b>
+    Showing: <b>{productsFiltered.length}</b> products
+    {productsFiltered.length !== products.length && <span className="hidden-products">
+      - hidden: <b>{products.length - productsFiltered.length} </b>
+    </span>}
     {productsFiltered.map(product => {
       return <CardProduct key={product.id} product={product} />
     })}
