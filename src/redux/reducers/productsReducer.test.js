@@ -11,4 +11,12 @@ describe('Products Reducer', () => {
         );
         expect(state.length).toBe(1);
     });
+
+    it('return same state withs unknow_action', () => {
+        const state = productsReducer(
+            [],
+            {type: 'unknow_action'}
+        );
+        expect(state.length).toBe(0);
+    });
 })

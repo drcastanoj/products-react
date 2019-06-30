@@ -25,13 +25,13 @@
     "start": "run-p start:dev start:api",
     "start:dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prestart:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
     "test-e2e": "cypress open",
     "cy": "run-p start:dev start:api test-e2e ",
-    "test:report" : ""
+    "test:report" : "react-scripts test --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -19,4 +19,12 @@ describe('CategorySelected Reducer', () => {
         );
         expect(state).toBe('Tech');
     })
+
+    it('return same state withs unknow_action', () => {
+        const state = categorySelectedReducer(
+            null,
+            {type: 'unknow_action'}
+        );
+        expect(state).toBe(null);
+    });
 })
