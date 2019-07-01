@@ -39,6 +39,6 @@ function CardProduct({ product }) {
 
 CardProduct.propTyoes = {
     product: PropTypes.object.isRequired
-}
+};
 
 export default CardProduct;

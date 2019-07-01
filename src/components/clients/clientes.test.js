@@ -15,7 +15,7 @@ describe('CoursesPage', () => {
 
     it(' Should get Clients text ', () => {
         const { getByText } = renderClientsPage();
-        getByText('Clients')
-    })
+        getByText('Clients');
+    });
 
 })
