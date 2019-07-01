@@ -1,9 +1,10 @@
 @import '~react-md/src/scss/react-md';
+@import 'src/styles/variables';
 
 body{
     margin: 0;
 
     .container{
-        margin-top: 45px;
+        margin-top: $height-header;
     }
 }

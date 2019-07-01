@@ -1,5 +1,8 @@
 @import 'src/styles/variables';
 
+@import '~react-md/src/scss/react-md';
+
+
 
 header{
     position: fixed;
@@ -11,13 +14,13 @@ header{
         justify-content: center;
         background-color: $gray;
         &__link {
-            width: 10%;
+            width: 25%;
             display: flex;
-            height: 45px;
+            height: $height-header;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            padding: 15px;
+            padding: 0px;
             color: $black;
             text-decoration: none;
             text-transform: uppercase;
@@ -25,6 +28,11 @@ header{
             font-size: 15px;
             &--active{
                 background-color: $gray-dark;
+            }
+
+            @media #{$md-tablet-media} {
+                width: 15%;
+                padding: 15px;
             }
         }
     }
