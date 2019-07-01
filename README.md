@@ -1,10 +1,62 @@
+
+### Quick start
+**Make sure you have Node version >= 6.0 and NPM >= 3**
+
+## Prerequisite
+- Install yarn `npm install -g yarn`
+
+```bash
+# clone
+git clone https://github.com/drcastanoj/products-react.git
+
+# change directory to our repo
+cd products-react
+
+
+# install the repo with yarn
+yarn or npm i
+
+# start the server backend
+yarn start:dev or npm run start:dev
+
+```
+go to frontend[http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:5000](http://localhost:3000) in your browser
+
+go to backend [http://0.0.0.0:8080/api](http://0.0.0.0:8080/api) or [http://localhost:8080/api](http://localhost:8080/api) in your browser
+
+
+
+## Build production on Heroku
+
+```bash
+# build
+yarn build
+
+# start the server backend
+yarn start
+
+```
+
+## Available Scripts
+1. `yarn start` - Starts the server backend and frontend for deploy on Heroku
+2. `yarn start:development` - Starts the react app
+3. `yarn clean:build` - Delete files on /build
+4. `yarn test:ci` - Run test and show coverage
+4. `yarn build` - Generate react app on /build
+5. `yarn test` - Run server test
+6. `yarn start:api` - Run server backend with products
+7. `yarn cy` - Run E2E tests
+
+
+###  create-react-app Docs
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start:dev or yarn start:dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,7 +64,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm test or yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
